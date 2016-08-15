@@ -1,0 +1,58 @@
+﻿<Window x:Class="MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SimpleScanForJagur"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="570" Width="750" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+    <Grid>
+        
+        <Canvas>
+            <Canvas.Background>
+                <RadialGradientBrush>
+                    <GradientStop Color="#FF2E6AA6" Offset="0"/>
+                    <GradientStop Color="#FF153E66" Offset="1"/>
+                </RadialGradientBrush>
+            </Canvas.Background>
+            <Image x:Name="image" Height="94" Canvas.Left="38" Canvas.Top="34" Width="160" Source="jp1.png" Stretch="Fill"/>
+            <Image x:Name="image1" Height="114" Canvas.Left="490" Canvas.Top="14" Width="154" Source="leoni.jpg"/>
+            <Label x:Name="label" Content="捷豹项目条码检查程序" Canvas.Left="450" Canvas.Top="100.427" Height="39.837" Width="232" FontSize="21.333" FontWeight="Bold" Foreground="White"/>
+            <TabControl SelectedIndex="0"  Canvas.Top="200" Canvas.Left="80" TabStripPlacement="Left" Background="Transparent" Name="ProjectTab">
+
+                <TabItem Header="CABIN"  Height="50"  Width="80"  Background="Transparent" TabIndex="0"  FontSize="20">
+            <Grid Height="260" Width="480">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <TextBox Grid.Row="0" x:Name="textBox_barcode1" Height="43"  TextWrapping="Wrap" Text="TextBox" Margin="10,10,0,0"  Width="454" FontSize="26.667"/>
+                        <TextBox Grid.Row="1"  x:Name="textBox_barcode2" Height="43" TextWrapping="Wrap" Text="TextBox"  Margin="10,10,0,0"   Width="454" FontSize="26.667"/>
+
+                        <TextBox Grid.Row="2"  x:Name="textBox_barcode3" Height="43"   TextWrapping="Wrap" Text="TextBox"   Margin="10,10,0,0"   Width="454" FontSize="26.667"/>
+                        <TextBox  Grid.Row="3" x:Name="textBox_barcode4" Height="43"  TextWrapping="Wrap" Text="TextBox" Margin="10,10,0,0"   Width="454" FontSize="26.667"/>
+
+                    </Grid>
+                </TabItem>
+                <TabItem Header="IP"  Height="50" Width="80" Background="Transparent" TabIndex="1" FontSize="20">
+                    <Grid Height="260" Width="480">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <TextBox Grid.Row="0" x:Name="textBox_barcode5" Height="43"  TextWrapping="Wrap" Text="TextBox"   Margin="10,10,0,0"  Width="454" FontSize="26.667"/>
+                        <TextBox Grid.Row="1"  x:Name="textBox_barcode6" Height="43" TextWrapping="Wrap"  Text="TextBox"   Margin="10,10,0,0"  Width="454" FontSize="26.667"/>
+                        <TextBox Grid.Row="2"  x:Name="textBox_barcode7" Height="43"   TextWrapping="Wrap"  Text="TextBox"    Margin="10,10,0,0"   Width="454" FontSize="26.667"/>
+
+                    </Grid>
+                </TabItem>
+            </TabControl>
+        </Canvas>
+       <Label x:Name="label_Copy" Content="依次扫描条码：" FontSize="21.333" FontWeight="Bold" Foreground="White" Margin="50,138.427,391,348.736"/>
+
+    </Grid>
+</Window>
